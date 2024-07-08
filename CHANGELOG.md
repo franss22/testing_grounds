@@ -1,3 +1,10 @@
+## 0.4.0 (2024-07-08)
+
+### Feat
+
+- **test.py**: add test3()
+- **test.py**: remove test2
+
 ## 0.3.0 (2024-07-08)
 
 ### Feat
