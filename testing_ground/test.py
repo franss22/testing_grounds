@@ -1,3 +1,6 @@
+from typing import Literal
+
+
 print("test")
 
 
@@ -8,4 +11,9 @@ def test() -> bool:
 
 def test3() -> bool:
     print("test3 func")
+    return True
+
+
+def whoa() -> Literal[True]:
+    print("whoa")
     return True
