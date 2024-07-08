@@ -16,4 +16,5 @@ def test3() -> bool:
 
 def whoa() -> Literal[True]:
     print("whoa")
+    print("whoa2")
     return True
