@@ -1,3 +1,9 @@
+## v0.4.1 (2024-07-08)
+
+### Fix
+
+- **test.py**: add extra print to whoa
+
 ## 0.4.0 (2024-07-08)
 
 ### Feat
