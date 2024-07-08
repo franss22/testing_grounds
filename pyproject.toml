@@ -16,7 +16,7 @@ packages=["testing_ground"]
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-tag_format = "$major.$minor.$patch$prerelease"
+tag_format = "v$major.$minor.$patch$prerelease"
 version_scheme = "semver2"
 version_provider = "pep621"
 update_changelog_on_bump = true
