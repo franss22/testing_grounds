@@ -1,5 +1,6 @@
 print("test")
 
 
-def test():
+def test() -> bool:
     print("test func")
+    return True
