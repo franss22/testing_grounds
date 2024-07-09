@@ -1,3 +1,9 @@
+## 0.7.0 (2024-07-09)
+
+### Feat
+
+- **test.py**: create nuw_func function for blablabl
+
 ## 0.6.0 (2024-07-09)
 
 ## v0.5.0 (2024-07-08)
