@@ -12,7 +12,3 @@ def test() -> bool:
 def test3() -> bool:
     print("test3 func")
     return True
-
-
-def new_func() -> None:
-    pass
