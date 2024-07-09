@@ -15,4 +15,4 @@ def test3() -> bool:
 
 
 def new_func() -> None:
-    pass
+    print("newww")
