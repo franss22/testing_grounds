@@ -1,4 +1,4 @@
-"""Auto-generated script for gen_calzo with trigger on_create."""
+"""Auto-generated script for gen_cometido with trigger on_delete."""
 
 from lib import QueryRunner
 
