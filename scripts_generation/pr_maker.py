@@ -52,11 +52,15 @@ def push_and_pr(file_list: list[str], author: str) -> None:
     run_cmd(cmd)
     print("Pushed changes to remote repository.")
 
-    pr_title = f"Auto-generated script changes by {author}"
+    pr_title = f"Auto-generated script changes by {author}, {time.strftime('%Y-%m-%d %H:%M:%S')}"
     pr_body = "This PR contains auto-generated script changes for:\n\n- " + "\n- ".join(file_list)
     cmd = f"gh pr create --title '{pr_title}' --body '{pr_body}' --base master"
     run_cmd(cmd)
     print("Pull request created.")
+    print("returning to main branch...")
+    run_cmd("git checkout master")
+    print("Switched back to main branch.")
+    print("Done.")
 
 
 def generate_and_upload_scripts(entity_triggers: list[EntityTrigger], author: str, author_mail: str) -> None:

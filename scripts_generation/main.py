@@ -1,23 +1,27 @@
-from gen_scripts.lib import EntityTrigger, generate_script, Snippet, Trigger
-
-entity: str = "gen_calzo"
-trigger = Trigger.ON_CREATE
+from gen_scripts.lib import EntityTrigger, Snippet, Trigger
+from pr_maker import generate_and_upload_scripts
 
 
 snippets: list[Snippet] = [
     {"comment": "This is a comment for snippet 1\nWith newlines!", "query": "SELECT * FROM table;"},
-    {"comment": "This is a comment for snippet 2, with new changes", "query": "SELECT * FROM table WHERE id = 1;"},
+    {
+        "comment": "This is a comment for snippet 2, with new changes\nWow, even more cahnges",
+        "query": "SELECT * FROM table WHERE id = 1;",
+    },
+    {"comment": None, "query": "UPDATE table SET id = 1;"},
 ]
 
 author: str = "Auto Script Generator"
 author_mail: str = "auto@coderhub.cl"
 
-entity_trigger : list[EntityTrigger] = [
-    (entity, trigger, snippets),
+entity_trigger: list[EntityTrigger] = [
+    ("gen_calzo", Trigger.ON_CREATE, snippets),
+    ("gen_calzo", Trigger.ON_DELETE, snippets),
 ]
 
+
 def main():
-    from pr_maker import generate_and_upload_scripts
+
     generate_and_upload_scripts(entity_trigger, author, author_mail)
 
 
