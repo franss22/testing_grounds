@@ -11,7 +11,7 @@ With newlines!
 runner.add_query("""SELECT * FROM table;""")
 
 """
-This is a comment for snippet 2
+This is a comment for snippet 2, with new changes
 """
 runner.add_query("""SELECT * FROM table WHERE id = 1;""")
 
