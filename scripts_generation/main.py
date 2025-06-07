@@ -1,5 +1,4 @@
-from gen_scripts.lib import EntityTrigger, Snippet, Trigger
-from pr_maker import generate_and_upload_scripts
+from gen_scripts.lib import EntityTrigger, Snippet, Trigger, generate_and_upload_scripts
 
 
 snippets: list[Snippet] = [
