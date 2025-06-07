@@ -16,6 +16,8 @@ author_mail: str = "melkora.vermelho@coderhub.cl"
 entity_trigger: list[EntityTrigger] = [
     ("gen_calzo", Trigger.ON_CREATE, snippets),
     ("gen_calzo", Trigger.ON_DELETE, snippets),
+    ("gen_cometido", Trigger.ON_DELETE, snippets),
+    ("gen_funcionario", Trigger.ON_DELETE, snippets),
 ]
 
 
