@@ -49,6 +49,7 @@ class Trigger(Enum):
     ON_UPDATE = "on_update"
     ON_DELETE = "on_delete"
 
+EntityTrigger = tuple[str, Trigger, list[Snippet]]
 
 def docstring(snippet: Snippet) -> str:
     """

@@ -1,6 +1,8 @@
 import subprocess
 import time
 
+from gen_scripts.lib import EntityTrigger, Snippet
+
 
 def run_cmd(cmd: str) -> subprocess.CompletedProcess[str]:
     """Run a command."""
@@ -11,7 +13,7 @@ def run_cmd(cmd: str) -> subprocess.CompletedProcess[str]:
         raise e
 
 
-def changes_exist() -> None:
+def changes_exist() -> bool:
     """Check for changes in the repository."""
     cmd = "git diff --exit-code --quiet"
     result = subprocess.run(cmd, shell=True)
@@ -57,13 +59,13 @@ def push_and_pr(file_list: list[str], author: str) -> None:
     print("Pull request created.")
 
 
-def generate_and_upload_scripts(snippets: list[dict], entity: str, trigger: str, author: str, author_mail: str) -> None:
+def generate_and_upload_scripts(entity_triggers: list[EntityTrigger], author: str, author_mail: str) -> None:
     """Generate scripts and upload them to the repository."""
     from gen_scripts.lib import generate_script  # Import here to avoid circular imports
 
     file_list = []
-    for snippet in snippets:
-        script, path = generate_script(snippet, entity, trigger)
+    for entity, trigger, snippets in entity_triggers:
+        script, path = generate_script(snippets, entity, trigger)
         with open(path, "w") as file:
             file.write(script)
         file_list.append(path)
