@@ -6,7 +6,7 @@ trigger = Trigger.ON_CREATE
 
 snippets: list[Snippet] = [
     {"comment": "This is a comment for snippet 1\nWith newlines!", "query": "SELECT * FROM table;"},
-    {"comment": "This is a comment for snippet 2", "query": "SELECT * FROM table WHERE id = 1;"},
+    {"comment": "This is a comment for snippet 2, with new changes", "query": "SELECT * FROM table WHERE id = 1;"},
 ]
 
 author: str = "Auto Script Generator"
