@@ -54,7 +54,7 @@ def push_and_pr(file_list: list[str], author: str) -> None:
 
     pr_title = f"Auto-generated script changes by {author}"
     pr_body = "This PR contains auto-generated script changes for:\n\n- " + "\n- ".join(file_list)
-    cmd = f"gh pr create --title '{pr_title}' --body '{pr_body}' --base main"
+    cmd = f"gh pr create --title '{pr_title}' --body '{pr_body}' --base master"
     run_cmd(cmd)
     print("Pull request created.")
 
