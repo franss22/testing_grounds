@@ -1,0 +1,12 @@
+[project]
+name = "script-maker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chlib",
+]
+
+[tool.uv.sources]
+chlib = { git = "ssh://git@github.com/CoderhubSpA/chlib.git" }
