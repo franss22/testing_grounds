@@ -57,7 +57,7 @@ def docstring(snippet: Snippet) -> str:
     """
     Formats a comment as a docstring.
     """
-    comment: str = snippet.get("comment", "").strip()
+    comment: str = (snippet.get("comment") or "").strip()
     if not comment:
         return '"""\nNo comment provided.\n"""'
 
