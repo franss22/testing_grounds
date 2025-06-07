@@ -10,8 +10,8 @@ snippets: list[Snippet] = [
     {"comment": None, "query": "UPDATE table SET id = 1;"},
 ]
 
-author: str = "Auto Script Generator"
-author_mail: str = "auto@coderhub.cl"
+author: str = "Melkora Vermelho"
+author_mail: str = "melkora.vermelho@coderhub.cl"
 
 entity_trigger: list[EntityTrigger] = [
     ("gen_calzo", Trigger.ON_CREATE, snippets),
